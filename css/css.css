@@ -1,0 +1,58 @@
+/* Devin "Lauren" Elder */
+/* VFW Term 1212 */
+/* Project 3 */
+/* 12/6/2012 */
+
+body {
+	background-color: #FFF7EA;
+}
+
+h1 {
+	color: #000000;
+	background-color: #E8D9C9;
+	font-family: Edwardian Script ITC, Noteworthy;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid black;
+}
+
+h2 {
+	font-family: Edwardian Script ITC, Noteworthy;
+	font-weight: normal;
+	font-size: 40px;
+}
+
+nav {
+	text-align: center;
+}
+
+input[type="text"] {
+	border: 1px solid black;
+	padding: 5px;
+	margin-left: 5px
+}
+
+ul {
+	margin-top: 15px;
+}
+
+p {
+	font-family: Lucida Calligraphy, Noteworthy;
+	font-size: 16px
+}
+
+fieldset {
+	color: #000000;
+	background-color: #E8D9C9
+}
+
+legend {
+	font-family: Lucida Calligraphy, Noteworthy;
+	font-size: 18px;
+}
+
+li {
+	font-family: Lucida Calligraphy, Noteworthy;
+	font-size: 14px
+}
