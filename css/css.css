@@ -16,6 +16,7 @@ h1 {
 	text-align: center;
 	border: 1px solid black;
 	border-radius: 5px;
+	box-shadow: 1px 1px 5px #A8AFB4;
 }
 
 h2 {
@@ -43,10 +44,18 @@ p {
 	font-size: 16px
 }
 
+div {
+	display: inline;
+	margin-left: 13px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
 fieldset {
 	color: #000000;
 	background-color: #E8D9C9;
-	border-radius: 5px
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px #B2BABF;
 }
 
 legend {
@@ -57,5 +66,6 @@ legend {
 li {
 	font-family: Lucida Calligraphy, Noteworthy;
 	font-size: 14px;
-	list-style-type: none
+	list-style-type: none;
+	margin-left: -20px;
 }

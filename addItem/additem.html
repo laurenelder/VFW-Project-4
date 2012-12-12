@@ -112,14 +112,14 @@
 							<option value="Western">Western</option>
 						</select>
 					</li>
-					<li><label for="compatibility">Level of Compatibility:</label><input type="range" id="compatibility" min="1" max="100" /></li>
+					<li><label for="compatibility">Level of Compatibility: 0% </label><input type="range" id="compatibility" min="1" max="100" onchange="displaySlider(this.value)" /> 100% <div id="sliderDisplay"></div> </li>
 					<li><label for="comments">Additional Information:</label><textarea id="comments"></textarea></li>
 					<li><input type="hidden" value="true" /></li>
 				</ul>
 			</fieldset>
 			</section>
 			<br />
-			<input type="submit" id="submit"value="Submit New User" />
+			<input type="submit" id="submit" value="Submit New User" />
 
 		<script type="text/javascript" src="../js/json.js"></script>
 		<script type="text/javascript" src="../js/main.js"></script>

@@ -11,6 +11,13 @@ window.addEventListener("DOMContentLoaded", function() {
 		return theElement;
 	};
 
+// Display Slider Value Functions
+	$("compatibility").onchange = function() {
+		var display = $("sliderDisplay");
+		var sliderValue = $("compatibility").value + "%";
+		display.innerHTML = sliderValue;
+	}
+
 // Radio Button Functions
 	var getRadioGender = function() {
 		var radioOne = document.forms[0].gender;
@@ -30,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	};
 
 // Check Box Function
-	getCheckBoxValue = function() {
+	var getCheckBoxValue = function() {
 		if ($("vehicle").checked) {
 			vehicleValue = "Yes";
 		} else {
