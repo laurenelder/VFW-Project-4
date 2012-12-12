@@ -98,6 +98,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
 // Get Data Function
 	var getData	= function() {
+		if (window.localStorage.length === 0) {
+			alert("There is no data in local storage so default data has been entered.");
+			autoFillData();
+		}
 		toggleLinks("on");
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "item");
@@ -114,6 +118,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement("ul");
 			makeLi.appendChild(makeSubList);
+			getImage(obj.gender[1], obj.orientation[1], makeSubList);
 			for(var n in obj) {
 				var makeSubLi = document.createElement("li");
 				makeSubList.appendChild(makeSubLi);
@@ -122,6 +127,37 @@ window.addEventListener("DOMContentLoaded", function() {
 				makeSubList.appendChild(linksLi)
 			};
 		makeItemLinks(window.localStorage.key(i), linksLi);
+		};
+	};
+
+// Get Image Function
+var getImage = function(genderType, oValue, makeSubList) {
+	var imageLi = document.createElement("li");
+	makeSubList.appendChild(imageLi);
+	var newImgOne = document.createElement("img");
+	var newImgTwo = document.createElement("img");
+	var setSrcOne = newImgOne.setAttribute("src", "../img/" + genderType + ".png");
+	if (oValue === "Straight") {
+		var setSrcTwo = newImgTwo.setAttribute("src", "../img/Straight.png");
+	}
+	if (oValue === "Bisexual") {
+		var setSrcTwo = newImgTwo.setAttribute("src", "../img/Bisexual.png");
+	}
+	if (oValue === "Gay" && genderType === "Male") {
+		var setSrcTwo = newImgTwo.setAttribute("src", "../img/gayMale.png");
+	}
+	if (oValue === "Gay" && genderType === "Female") {
+		var setSrcTwo = newImgTwo.setAttribute("src", "../img/gayFemale.png");
+	}
+	imageLi.appendChild(newImgOne);
+	imageLi.appendChild(newImgTwo);
+};
+
+// Auto Fill Data Function
+	var autoFillData = function() {
+		for (var n in json) {
+			var id = Math.floor(Math.random() * 1000001);
+			window.localStorage.setItem(id, JSON.stringify(json[n]));
 		};
 	};
 
