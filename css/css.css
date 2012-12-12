@@ -15,6 +15,7 @@ h1 {
 	font-weight: bold;
 	text-align: center;
 	border: 1px solid black;
+	border-radius: 5px;
 }
 
 h2 {
@@ -44,7 +45,8 @@ p {
 
 fieldset {
 	color: #000000;
-	background-color: #E8D9C9
+	background-color: #E8D9C9;
+	border-radius: 5px
 }
 
 legend {
@@ -54,5 +56,6 @@ legend {
 
 li {
 	font-family: Lucida Calligraphy, Noteworthy;
-	font-size: 14px
+	font-size: 14px;
+	list-style-type: none
 }
